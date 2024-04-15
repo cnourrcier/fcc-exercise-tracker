@@ -38,11 +38,18 @@ app.post('/api/users/:_id/exercises', async (req, res) => {
   if (!user) {
     res.send('User not found');
   }
+  let { date } = req.body;
+  if (date === '' || date === undefined || date === null) {
+    date = new Date();
+  } else {
+    date = new Date(date.replace(/-/g, '\/'));
+  }
   const newExercise = new Exercise({
-    date: req.body.date,
+    date: date,
     duration: req.body.duration,
     description: req.body.description
   });
+
   user.log.push(newExercise);
   await newExercise.save();
   await user.save();
@@ -82,8 +89,6 @@ app.get('/api/users/:_id/logs', async (req, res) => {
     log: log
   });
 })
-
-
 
 const listener = app.listen(process.env.PORT || 3000, () => {
   console.log('Your app is listening on port ' + listener.address().port)

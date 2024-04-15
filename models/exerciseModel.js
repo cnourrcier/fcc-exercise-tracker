@@ -16,16 +16,6 @@ const exerciseSchema = new mongoose.Schema({
     }
 }, { versionKey: false })
 
-// Handle the date format before saving. If no date provided, use current date. 
-exerciseSchema.pre('save', async function (next) {
-    if (this.date === '' || this.date === undefined || this.date === null) {
-        this.date = new Date();
-    } else {
-        this.date = new Date(this.date);
-    }
-    next();
-})
-
 const Exercise = mongoose.model('Exercise', exerciseSchema);
 
 module.exports = Exercise;
