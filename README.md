@@ -1,36 +1,20 @@
 # Exercise Tracker
 
-This is my Exercise Tracker Project for freecodecamp.org. I used the provided [boilerplate](https://github.com/freeCodeCamp/boilerplate-project-exercisetracker/) to complete this challenge. The test requirements can be found [here](https://www.freecodecamp.org/learn/back-end-development-and-apis/back-end-development-and-apis-projects/exercise-tracker).
+This project is a RESTful API built with Node.js, Express.js, and Mongoose for tracking users' exercises. It allows users to create accounts, log exercises, and view exercise logs with optional filtering.
 
 ## Table of Contents
 
-- [Installation](#installation)
-- [Usage](#usage)
+- [Installation and Usage](#installation-and-usage)
 - [API Endpoints](#api-endpoints)
+- [Credits](#credits)
 - [License](#license)
 
-## Installation
+## Installation and Usage
 
-1. Clone the repository:
-
-```bash
-git clone https://github.com/cnourrcier/fcc-exercise-tracker.git
-```
-
-2. Install dependencies:
-
-```bash
-cd fcc-exercise-tracker
-npm install
-```
-
-## Usage
-
-1. Start the server:
-
-```bash
-npm run start
-```
+1. Clone or download the project files from the repository.
+2. Install dependencies using npm: `npm install`
+3. Start the server: `node server.js` or `npm start`
+4. Access the API endpoints using a tool like Postman, Thunder Client, or Hoppscotch.io, or through your browser.
 
 ## API Endpoints
 
@@ -41,7 +25,13 @@ npm run start
 | POST /api/users | Create a new user |
 | POST /api/users/:_id/exercises | Create a new logged exercise |
 
-## License
+## Credits
 
-This project is licensed under the MIT License - see the [MIT License](LICENSE) file for details. 
+This project was created as part of the freeCodeCamp Back End Development and APIs Certification curriculum. Special thanks to the freeCodeCamp community for providing resources and support.
+
+
+### License:
+
+This project is open-source and available under the [BSD 3-Clause License](LICENSE). Feel free to use, modify, and distribute it according to the terms of the BSD 3-Clause License.
+
 
